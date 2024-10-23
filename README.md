@@ -1,4 +1,4 @@
-# Human Resources Management Shop API
+# Human Resources Management API
 
 This project is a RESTful API for managing a human-resource-management, developed using Spring Boot. It includes functionality to manage users, Employee, admin, and provides authentication through JWT tokens. The project follows best practices for REST API development and includes integration with a Oracle database, OpenAPI for API documentation.
 
