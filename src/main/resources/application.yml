@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: Human Resources Management API
+  datasource:
+      url: jdbc:oracle:thin:@localhost:1521:xe
+      username: C##HUMAN_RESOURCE
+      password: 1234
+      driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+
+  mail:
+      host: localhost
+      port: 1025
+      username: admin
+      password: admin
+      properties:
+        mail:
+          smtp:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connection:
+            timeout: 5000
+            writetimeout: 5000
+
+security:
+  jwt:
+    secret-key: "RSjUBwnNFcjYzUFqFFDw1pCFbfZed5MC2QQVzs+CWeY="
+    expiration-time: 86400000
+
+mailing:
+  frontend:
+    activation:
+      activationUrl:  http://localhost:4200/activate-account
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
+
+server:
+  port: 8080
